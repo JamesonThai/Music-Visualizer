@@ -1,0 +1,15 @@
+var mic;
+
+function setup(){
+  createCanvas(400,400);
+  mic = new p5.AudioIn();
+  mic.start();
+}
+
+function draw(){
+  background (51);
+  var vol = mic.getLevel();
+
+  ellipse(200,220, vol*200, vol*200);
+
+}
